@@ -1,14 +1,18 @@
 import os
 import time
 import tempfile
+import argparse
 import shotgun_api3
 
 version_id = 74131
 
+script_name = input("Enter your script name: ")
+api_key = input("Enter your API key: ")
+
 sg = shotgun_api3.Shotgun(
     base_url="https://wlvfx.shotgrid.autodesk.com",
-    script_name="pipetest2",
-    api_key="pno9zijmnist~qzeehfhldbWs",
+    script_name=script_name,
+    api_key=api_key,
 )
 
 version = sg.find_one("Version", [["id","is",version_id]], ["sg_uploaded_movie"])
