@@ -8,7 +8,7 @@ version_id = 74131
 sg = shotgun_api3.Shotgun(
     base_url="https://wlvfx.shotgrid.autodesk.com",
     script_name="pipetest2",
-    api_key="pno9zijmnist~qzeehfhldbWs",
+    api_key="",
 )
 
 version = sg.find_one("Version", [["id","is",version_id]], ["sg_uploaded_movie"])
